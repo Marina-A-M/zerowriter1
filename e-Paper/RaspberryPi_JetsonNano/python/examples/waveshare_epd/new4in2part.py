@@ -57,14 +57,13 @@ import RPi.GPIO as GPIO
 import time
 
 # Display resolution
-EPD_WIDTH  = 400
-EPD_HEIGHT = 300
+EPD_WIDTH       = 800
+EPD_HEIGHT      = 480
 
-
-GRAY1 = 0xff  # white
-GRAY2 = 0xff
-GRAY3 = 0x00  # gray
-GRAY4 = 0x00  # Blackest
+GRAY1  = 0xff #white
+GRAY2  = 0xC0
+GRAY3  = 0x80 #gray
+GRAY4  = 0x00 #Blackest
 
 # Define the batch size (adjust as needed)
 BATCH_SIZE_X = 24
@@ -81,10 +80,10 @@ class EPD:
         self.cs_pin = epdconfig.CS_PIN
         self.width = EPD_WIDTH
         self.height = EPD_HEIGHT
-        self.GRAY1 = GRAY1  # white
-        self.GRAY2 = GRAY2
-        self.GRAY3 = GRAY3  # gray
-        self.GRAY4 = GRAY4  # Blackest
+        self.GRAY1  = GRAY1 #white
+        self.GRAY2  = GRAY2
+        self.GRAY3  = GRAY3 #gray
+        self.GRAY4  = GRAY4 #Blackest
         self.DATA = [0x00] * 15000
 
     lut_vcom0 = [
